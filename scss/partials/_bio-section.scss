@@ -1,0 +1,182 @@
+
+.bio-section {
+  z-index: 1;
+
+    .bio-swiper {
+      width:100%;
+      height:100vh;
+
+      @include mobile-landscape {
+        height:130vh;
+      }
+    }
+
+    [class*='slide-']{
+      height:100%;
+      background-position: left;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    [class*="__tint"]{
+      width:100%;
+      height:100%;
+      background-color: rgba(43, 51, 63, 0.4);
+    }
+    .swiper-pagination {
+      text-align: left;
+      padding-left: 40px;
+      margin-bottom: 30px;
+    }
+
+    .swiper-pagination-bullet {
+
+      width: 10px;
+      margin: 0 10px !important;
+      height: 10px;
+      text-align: center;
+      opacity: 1;
+      background: $detail;
+    }
+    .swiper-pagination-bullet-active {
+      position: relative;
+      background-color: white;
+      transition: .5s linear;
+    }
+    .biography {
+      .biography__name {
+        font-size: 30px;
+        padding-top: 13vh;
+        text-align: center;
+      }
+      .biography__proffesion {
+        font-size: 18px;
+        color: $detail;
+        text-align: center;
+        margin-bottom: 6vh;
+      }
+      .biography__history {
+        font-size: 16px;
+        text-align: justify;
+        padding:20px;
+      }
+    }
+    .slide-1 {
+      background-image: url('../img/mon_1.jpg');
+      background-position: -40px;
+      @extend .biography;
+
+      @include mobile-landscape {
+        background-position: center;
+      }
+
+      @include media-tablet {
+        background-position: center;
+      }
+    }
+    .slide-2 {
+      background-image: url('../img/mar_1.jpg');
+      background-position: -300px;
+      @extend .biography;
+
+      @include mobile-landscape {
+        background-position: center;
+      }
+
+      @include media-tablet {
+        background-position: center;
+      }
+    }
+    .slide-3 {
+      background-image: url('../img/kub_1.jpg');
+      @extend .biography;
+      background-position: -600px;
+      background-size: 300%;
+
+      @include mobile-landscape {
+        background-position: center;
+        background-size: cover;
+      }
+
+      @include media-tablet {
+        background-position: center;
+        background-size: cover;
+      }
+    }
+    .slide-4 {
+      background-image: url('../img/jan_1.jpg');
+      background-position: -350px;
+      @extend .biography;
+
+      @include mobile-landscape {
+        background-position: center;
+        background-size: cover;
+      }
+
+      @include media-tablet {
+        background-position: right;
+      }
+    }
+}
+@include media-tablet {
+  .biography {
+    .biography__name {
+      font-size: 8vh;
+      padding-top: 7vh;
+    }
+    .biography__proffesion {
+      font-size: 4vh;
+      margin-bottom: 8vh;
+    }
+    .biography__history {
+      font-size: 3.2vh;
+      padding:20px;
+    }
+  }
+  .bio-section {
+    .bio-section__swiper {
+      .slide-1 {
+        background-position: left;
+      }
+      .slide-2 {
+        background-position: left;
+      }
+      .slide-3 {
+        background-position: center;
+        background-size: cover
+      }
+    }
+  }
+}
+@include media-laptop {
+
+}
+@include media-desktop {
+  .biography {
+    .biography__name {
+      font-size: 60px;
+      padding-top: 7vh;
+    }
+    .biography__proffesion {
+      font-size: 36px;
+      margin-bottom: 8vh;
+    }
+    .biography__history {
+      font-size: 28px;
+      padding:20px;
+    }
+  }
+  .bio-section {
+    .slide-1 {
+      background-position: left;
+    }
+    .slide-2 {
+      background-position: left;
+    }
+    .slide-3 {
+      background-position: center;
+      background-size: cover
+    }
+  }
+}
+
+

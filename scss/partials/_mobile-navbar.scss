@@ -1,0 +1,16 @@
+.mobile-navbar {
+  position: fixed;
+  top:0;
+  width:100%;
+  background-color: $mobile-navbar-bg-color;
+  height:50px;
+  z-index: 6;
+
+  @include hamburger-icon;
+
+  @include media-tablet {
+    display: none;
+  }
+
+}
+

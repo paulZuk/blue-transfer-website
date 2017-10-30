@@ -1,0 +1,30 @@
+body {
+    background-color: black;
+    font-family: "Open Sans Condensed", Arial, sans-serif;
+    font-weight: 300;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: #00C1FF;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+}
+
+.logo {
+  background-image: url('../img/bt_logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin:0 auto;
+  margin-top: 10vh;
+  width: 30vh;
+  height: 30vh;
+}

@@ -1,0 +1,92 @@
+.mobile-sidenav {
+  margin-top: 50px;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  left: 0;
+  background-color: $mobile-navbar-bg-color;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: width 0.2s;
+
+  &.active-sidenav {
+    width: 100%;
+  }
+  .mobile-sidenav__logo {
+    margin: 0 auto;
+    margin-bottom: 5vh;
+    width:80%;
+    height:20vh;
+    background-image: url("../img/bt_logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mobile-landscape {
+      height:0;
+    }
+
+  }
+  .mobile-sidenav__social-icons {
+    padding-top: 10vh;
+    display: flex;
+    justify-content:center;
+
+    .icon {
+      width:30px;
+      height:30px;
+      margin: 0 10px;
+    }
+
+    .twitter-contact {
+      background-image: url(../img/icons.png);
+      background-position: -60px 0;
+      background-size: 120px;
+      background-repeat: no-repeat;
+      &:hover {
+        background-position: -90px 0;
+      }
+    }
+    .fb-contact {
+      background-image: url(../img/icons.png);
+      background-position: -60px -30px;
+      background-size: 120px;
+      background-repeat: no-repeat;
+      &:hover {
+        background-position: -90px -30px;
+      }
+    }
+    .instagram-contact {
+      background-image: url(../img/icons.png);
+      background-position: -60px -60px;
+      background-size: 120px;
+      background-repeat: no-repeat;
+      &:hover {
+        background-position: -90px -60px;
+      }
+    }
+    @include clearFix;
+  }
+  .mobile-sidenav__link {
+    margin: 10px auto;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 26px;
+    transition: color 0.3s;
+
+     @include mobile-landscape {
+       font-size: 20px;
+     }
+
+    &:active {
+      color: $detail;
+    }
+    &:hover {
+      background-color: rgba(128, 128, 128, .3);
+    }
+  }
+}

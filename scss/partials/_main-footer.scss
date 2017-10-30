@@ -1,0 +1,21 @@
+.main-footer {
+  height:60px;
+  background-color: $detail;
+  display: flex;
+  align-items: center;
+
+  @include media-tablet {
+    height:$main-footer-height;
+  }
+}
+.main-footer__about {
+  display: flex;
+  justify-content: center;
+  .about__text {
+    font-size: 12px;
+
+    @include media-desktop {
+      font-size: 16px;
+    }
+  }
+}

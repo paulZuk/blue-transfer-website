@@ -1,0 +1,61 @@
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  background-color: $main-background-color;
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  color: $font;
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  font-weight: 300;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $detail;
+    border-radius: 50px;
+  }
+}
+.back-arrow {
+  display: none;
+  z-index: 5;
+  position: fixed;
+  width:20px;
+  height:20px;
+  background-image: url("../img/icons.png");
+  border-radius: 50%;
+  background-size: 80px;
+  background-position: -40px -60px;
+  background-repeat:no-repeat;
+  background-color: transparent;
+  right:5%;
+  bottom:10%;
+  border:0;
+  transition: transform .2s;
+  @include moz {
+    background-position: -40px -60px;
+  }
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+@include loadingScreen;
+
+.loading {
+  display: none;
+  flex-direction: column;
+  .logo {
+    width:200px;
+    height:200px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/bt_logo.svg");
+  }
+}
+
+

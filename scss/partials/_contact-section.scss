@@ -1,0 +1,223 @@
+.contact-section {
+  padding-top: $section-spacing;
+
+  @include media-laptop {
+    min-height:$section-height - $main-footer-height;
+  }
+}
+
+.contact {
+
+  .contact__right {
+
+    @include media-desktop {
+      padding: 0;
+    }
+
+    .right__contact-form {
+      margin: 0 auto;
+
+      input,textarea {
+        padding-left: 20px;
+        display: block;
+        margin-bottom:15px;
+        width:100%;
+        height:50px;
+        border-radius: 3px;
+        border:none;
+        font-family: $font-used;
+        font-size: 16px;
+
+        @include media-desktop {
+          margin-bottom: 20px;
+          height:60px;
+        }
+
+        &::-webkit-input-placeholder {
+          font-family: $font-used;
+          font-size: 16px;
+        }
+      }
+      textarea {
+        padding-top: 10px;
+        resize: none;
+      }
+      .contact-form__name {
+
+      }
+      .contact-form__email {
+
+      }
+      .contact-form__message {
+        height:200px;
+        @include media-desktop {
+          height:250px;
+        }
+      }
+      .contact-form__button {
+        padding: 0;
+        width: 90px;
+        height: 40px;
+        background-color: $detail;
+        border:none;
+        color: $font;
+        border-radius: 3px;
+        font-family: $font-used;
+        font-size: 14px;
+      }
+    }
+  }
+  .contact__left {
+    margin-bottom: 20px;
+
+    .left__contact-header {
+      position: relative;
+      font-size: 28px;
+      font-weight: 300;
+      padding-left: 4vw;
+      margin-bottom: 60px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        display: block;
+        width:2px;
+        height:180%;
+        background-color: $detail;
+      }
+
+      @include media-laptop {
+        font-size: 30px;
+      }
+      @include media-desktop {
+        font-size: 40px;
+        margin-bottom: 15%;
+      }
+    }
+    .left__contact-text {
+      text-align: justify;
+      font-size: 18px;
+      padding-bottom:20px;
+
+      @include media-tablet {
+        padding-right: 80px;
+      }
+      @include media-laptop {
+        font-size: 20px;
+      }
+      @include media-desktop {
+        font-size: 24px;
+      }
+    }
+    .left__contact-email-warapper {
+      display: flex;
+      justify-content: flex-start;
+
+      .left__contact-envelope {
+        margin-right: 10px;
+        width:20px;
+        height:20px;
+        background-repeat: no-repeat;
+        background-image: url("../img/icons.png");
+        background-position: -60px -80px;
+        background-size: 80px;
+        &:hover {
+          background-position: -40px -80px;
+        }
+      }
+      
+      a:link {
+        text-decoration: none;
+      }
+      
+      .left__contact-email {
+        display: block;
+        font-size: 16px;
+        color: $detail;
+        margin-bottom: 20px;
+
+        &:hover {
+          color: white;
+        }
+
+        @include media-desktop {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .left__contact-address {
+
+      clear: both;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      @include media-desktop {
+        font-size: 18px;
+      }
+    }
+    .left__contact-icons {
+
+      display: flex;
+      justify-content: space-between;
+      width:130px;
+
+      .icon {
+        width:30px;
+        height:30px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .twitter-contact {
+        background-image: url(../img/icons.png);
+        background-position: -60px 0;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        &:hover {
+          background-position: -90px 0;
+        }
+      }
+      .fb-contact {
+        background-image: url(../img/icons.png);
+        background-position: -60px -30px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        &:hover {
+          background-position: -90px -30px;
+        }
+      }
+      .instagram-contact {
+        background-image: url(../img/icons.png);
+        background-position: -60px -60px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        &:hover {
+          background-position: -90px -60px;
+        }
+      }
+    }
+  }
+}
+.contact-form__wrong-alert {
+  color: $validation-error;
+  height:50px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+
+  @include media-laptop {
+    height:35px;
+    margin-bottom: 0;
+  }
+}
+.wrong-input {
+  color: $validation-error;
+  border: 2px solid $validation-error !important;
+}
+
+
+

@@ -1,0 +1,166 @@
+.concerts-section {
+  padding: $section-spacing 0;
+
+  @include media-laptop {
+    height:100vh;
+  }
+}
+.concerts-section__content {
+
+  .content__header {
+    position: relative;
+    font-size: 28px;
+    padding-left: 4vw;
+    margin-bottom: 60px;
+
+    @include media-desktop-43 {
+      margin-bottom: 100px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top:0;
+      left:0;
+      display: block;
+      width:2px;
+      height:180%;
+      background-color: $detail;
+    }
+    @include media-laptop {
+      font-size: 30px;
+    }
+    @include media-desktop {
+      font-size: 40px;
+    }
+    @include media-desktop-43 {
+      font-size: 40px;
+    }
+  }
+  .content__events {
+    position: relative;
+    margin: 0 auto;
+
+    @include media-laptop {
+      margin:0;
+      padding-left: 60px;
+    }
+    @include media-desktop {
+      margin: 0 auto;
+      padding-left: 0;
+      width:60%;
+    }
+
+    .day {
+      font-size: 35px;
+
+      @include media-tablet {
+        font-size: 45px;
+      }
+
+      @include media-laptop {
+        font-size: 50px;
+      }
+
+      @include media-desktop {
+        font-size: 70px;
+      }
+      @include media-desktop-43 {
+        font-size: 70px;
+      }
+    }
+    .month {
+      font-size: 16px;
+      padding-left: 5px;
+      text-align: left;
+      width:60px;
+      line-height: 16px;
+
+      @include media-tablet {
+        font-size: 18px;
+        line-height: 18px;
+      }
+
+      @include media-laptop {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      @include media-desktop {
+        font-size: 26px;
+        line-height: 26px;
+      }
+      @include media-desktop-43 {
+        font-size: 26px;
+        line-height: 26px;
+      }
+    }
+    .place {
+      font-size: 18px;
+      padding-left: 40px;
+
+      @include media-tablet {
+        font-size: 22px;
+      }
+
+      @include media-laptop {
+        font-size: 24px;
+      }
+      @include media-desktop {
+        font-size: 34px;
+      }
+      @include media-desktop-43 {
+        font-size: 34px;
+      }
+    }
+  }
+}
+.content__float {
+  display: none;
+
+  @include media-laptop {
+    height: 100%;
+    display: block;
+  }
+  [class*='float__'] {
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px 2px rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    float: left;
+    transition: filter 2s, transform 1s;
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0) !important;
+      transform: scale(1.05);
+      z-index: 2;
+    }
+  }
+  .float__1 {
+    width: 20vw;
+    height: 41vh;
+    margin-bottom: 5px;
+    background-image: url("../img/float_4.jpg");
+  }
+  .float__2 {
+    margin-left: 5px;
+    width: 20vw;
+    height: 41vh;
+    background-image: url("../img/float_5.jpg");
+    background-position: top;
+
+  }
+  .float__3 {
+    clear: both;
+    height: 40vh;
+    width: 40vw;
+    background-position: top;
+    background-image: url("../img/float_6.jpg");
+  }
+  @include clearFix;
+}
+
+
+
